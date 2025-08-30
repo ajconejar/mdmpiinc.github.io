@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineer Profile - Engineer Name</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #74ABE2, #5563DE);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .profile-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      max-width: 400px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .profile-card:hover {
+      transform: translateY(-10px);
+    }
+    .profile-card img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #5563DE;
+      margin-bottom: 15px;
+    }
+    .profile-card h2 {
+      margin: 10px 0;
+      font-size: 24px;
+      color: #333;
+    }
+    .profile-card p {
+      margin: 6px 0;
+      font-size: 15px;
+      color: #666;
+    }
+    .profile-card strong {
+      color: #000;
+    }
+    .contact-btn {
+      display: inline-block;
+      margin: 10px 5px;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+      background: #5563DE;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+    .contact-btn:hover {
+      background: #3b48a0;
+    }
+    .btn-call { background: #28a745; }   /* Green */
+    .btn-messenger { background: #0084FF; } /* Messenger Blue */
+    .btn-viber { background: #7360F2; }  /* Viber Purple */
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <img src="engineerPhoto.jpg" alt="Engineer Photo">
+    <h2>Engineer Name</h2>
+    <p><strong>Specialization:</strong> Electrical</p>
+    <p><strong>Email:</strong> engineer@email.com</p>
+    <p><strong>Contact:</strong> +639123456789</p>
+
+    <!-- Contact Buttons -->
+    <button class="contact-btn btn-call" onclick="callEngineer()">📞 Call</button>
+    <button class="contact-btn btn-messenger" onclick="openMessenger()">💬 Messenger</button>
+    <button class="contact-btn btn-viber" onclick="openViber()">📲 Viber</button>
+    <a href="mailto:engineer@email.com" class="contact-btn">✉️ Email</a>
+  </div>
+
+  <script>
+    // Replace with dynamic values from your DB
+    const phoneNumber = "+639123456789";  
+    const messengerLink = "https://m.me/username";  
+    const viberNumber = "+639123456789";  
+
+    function callEngineer() {
+      window.location.href = "tel:" + phoneNumber;
+    }
+
+    function openMessenger() {
+      window.location.href = messengerLink;
+    }
+
+    function openViber() {
+      window.location.href = "viber://chat?number=" + viberNumber;
+    }
+  </script>
+</body>
+</html>
